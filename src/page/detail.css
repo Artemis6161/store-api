@@ -1,0 +1,11 @@
+.detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+  }
+  .img{
+    height:15rem;
+  
+  }
+  

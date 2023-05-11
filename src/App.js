@@ -1,25 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from "./page/home.js"
+import {Provider} from "react-redux"
+import Cart from "./page/cart.js"
+import Detail from "./page/detail.js"
+import Navbar from './component/navbar.js'
+import store from"./store/store.js"
+import "../src/App.css"
+import {
+ 
+  Routes,
+  Route,
+  BrowserRouter,
+ 
+} from "react-router-dom";
+
+
+
+
+const App = () =>  {
+  return(
+    <div className='app'>
+    <Provider store={store}>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+      
+       
+          <Route path="/" element={<Home/>}></Route>
+         
+          <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/details/:productId" element={<Detail data="product"/>}></Route>
+       
+        </Routes>
+   
+      </BrowserRouter>
+      </Provider>
+      </div>
+  )
 }
 
-export default App;
+ export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
