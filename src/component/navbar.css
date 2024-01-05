@@ -37,3 +37,11 @@
 .cartCount{
     padding: 0.7rem 1rem;
 }
+@media (min-width: 600px) {
+    .navbarItems{
+    
+        
+        padding: 0 20px;
+      
+    }
+  }

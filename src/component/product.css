@@ -5,16 +5,21 @@
  border-radius: 10px;
 
 }
+.link{
+  text-decoration: none;
+  
+}
 img{
     height:80px;
   
   }
   .productsWrapper{
-
+  
     display:grid;
     grid-template-columns: repeat(4,1fr);
     gap:30px;
-   /* text-decoration: none; */
+    /* justify-items: center; */
+/* align-items: center; */
    
   }
  
@@ -32,4 +37,10 @@ img{
 }
 .btn:hover{
     background-color: #513282;
+}
+@media (min-width: 600px) {
+  .productsWrapper{
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  }
 }

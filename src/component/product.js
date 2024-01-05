@@ -36,7 +36,7 @@ if(status ===STATUSES.ERROR){
    
       <div className="card" key={product.key} >
       
-      <Link to={`/details/${product.id}`}>
+      <Link to={`/details/${product.id}`} className='link'>
       <img src={product.image} alt="img" />
       <h4>{product.title}</h4>
       <h5>{product.price}</h5>
